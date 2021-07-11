@@ -5,9 +5,9 @@ class MyClient(discord.Client):
         if(message.author!=self.user):
             return
         channels=[]
-        if(message.content=="purge_server"):
+        if(message.content=="purge2"):
             channels=message.channel.guild.channels
-        elif(message.content=="change this to anything you want"):  #change that to anything you want so when u type it in the channel it'll delete
+        elif(message.content=="purge1"):  #change that to anything you want so when u type it in the channel it'll delete
             channels.append(message.channel)
         else:
             return
@@ -27,4 +27,4 @@ class MyClient(discord.Client):
             
 
 client=MyClient(heartbeat_timeout=86400, guild_subscriptions=False)
-client.run("your token", bot=False)
+client.run("token_here", bot=False)
